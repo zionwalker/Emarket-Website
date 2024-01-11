@@ -105,17 +105,15 @@
 
             <div class="menu text-right">
                 <ul>
+                    
                     <li>
-                        <a asp-action="Guest">Home</a>
-                    </li>
-                    <li>
-                        <a asp-action="shop">Shops</a>
+                        <a asp-action="shop" asp-controller="shops">Shops</a>
                     </li>
                     <li>
                         <a asp-action="cart">Cart</a>
                     </li>
                     <li>
-                        <a asp-action="Login" class="">Login</a>
+                        <a asp-action="Login" asp-controller="Home" class="">Login</a>
                     </li>
                 </ul>
             </div>
