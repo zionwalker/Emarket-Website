@@ -1,0 +1,112 @@
+﻿@{
+    
+    var ItemId = ViewBag.ItemId;
+    var reviews = ViewBag.Reviews as List<Review>;
+}
+
+<div class="container">
+    @if (reviews != null && reviews.Any())
+    {
+        var item = reviews.First().Item;
+
+        <h2>Name: @item.Name</h2>
+
+        <div class="item-images">
+            @foreach (var image in item.ItemImages)
+            {
+
+                <img src="@Url.Content(image.Item.ItemImages.First().Url)" style="max-height:160px;" />
+            }
+        </div>
+
+        <div class="existing-reviews">
+            <br>
+            <h3>Previous Customer Reviews:</h3>
+            <div class="review-cards">
+                @foreach (var review in reviews)
+                {
+                    <div class="card">
+                        <p><strong>User:</strong> @review.User.FirstName</p>
+                        <p><strong>Rating:</strong> @review.RatingValue</p>
+                        <p><strong>Comment:</strong> @review.Comment</p>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>No reviews for this item yet.</p>
+    }
+</div>
+
+
+
+    <form asp-action="SubmitReview" asp-controller="Reviews" method="post" class="new-review-form">
+        <input type="hidden" name="ItemId" id="ItemId" value="@ItemId" />
+
+        <label for="RatingValue">Rating:</label>
+        <input type="number" id="RatingValue" name="RatingValue" min="1" max="5" required style="width: 100px;" />
+
+        <label for="Comment">Comment:</label>
+        <textarea id="Comment" name="Comment" required></textarea>
+
+        <button type="submit" class="submit-btn">Submit Review</button>
+    </form>
+</div>
+
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .existing-reviews {
+        margin-bottom: 20px;
+    }
+
+    .review-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: calc(33.33% - 20px);
+        box-sizing: border-box;
+    }
+
+    .new-review-form {
+        margin-top: 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+   
+    .submit-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+</style>

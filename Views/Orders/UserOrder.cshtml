@@ -1,0 +1,205 @@
+﻿@model IEnumerable<Emarket_Website.Models.Order>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<h1> Your Orders </h1>
+<br />
+<br />
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderStat)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Shop.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderStat.Status)
+                </td>
+                
+                
+                <td>
+
+                    <a asp-action="UserOrderDetails" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="RemoveOrder" asp-controller="Home" asp-route-id="@item.Id">Remove</a> |
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+
+@* <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMarket Website</title>
+    <script>
+        document.getElementById('openCreateModal').addEventListener('click', function () {
+            var createModal = new bootstrap.Modal(document.getElementById('createModal'));
+            createModal.show();
+        });
+
+        document.getElementById('createForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // prevent the default form submission
+
+            // Additional logic for form submission (if needed)
+
+            var createModal = bootstrap.Modal.getInstance(document.getElementById('createModal'));
+            createModal.hide();
+        });
+    </script>
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .card:hover {
+                background-color: lightyellow;
+            }
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="" alt="EMarket logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a asp-action="index">Home</a>
+                    </li>
+                    <li>
+                        <a asp-action="shop">Shops</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+    <h2 style="text-align:center;">My Order</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayName("No")
+                </th>
+               
+                <th>
+                    @Html.DisplayName("Product Name")
+                </th>
+                <th>
+                    @Html.DisplayName("Shop Name")
+                </th>
+                <th>
+                    @Html.DisplayName("Order Status")
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Ordereditems)
+            {
+
+
+
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Item.Name
+                    </td>
+                    <td>
+                        @item.Order.Shop.Name
+                    </td>
+                    <td>
+                        @item.Order.OrderStat.Status
+                    </td>
+
+
+                    <td>
+
+                        <a asp-action="RemoveOrder" asp-controller="Orders" asp-route-id="@item.Id" class="btn btn-primary">Remove</a>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div id="createModal" class="modal" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Item name</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="@Url.Action("OrderInformation", "Orders", new { shopEntryId = $"{item.Item.ShopEntries.FirstOrDefault()?.Id}" })" class="btn btn-prima"> View Item</a>
+
+
+                    </td>
+
+
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</body>
+
+
+</html> *@

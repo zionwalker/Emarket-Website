@@ -1,0 +1,86 @@
+﻿@model Emarket_Website.ViewModels.HomeViewModel
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMarket Website</title>
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .card:hover {
+                background-color: lightyellow;
+            }
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="" alt="EMarket logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a asp-action="index">Home</a>
+                    </li>
+                    <li>
+                        <a asp-action="shop">Shops</a>
+                    </li>
+                    <li>
+                        <a href="Order.cshtml">Orders</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+    <h2 style="text-align:center;"> Welcome </h2>
+    <div class="row">
+        @foreach (var item in Model.itemS)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+               
+                    @if (item.ItemImages != null && item.ItemImages.Any())
+                    {
+                        <img src="@Url.Content(item.ItemImages.First().Url)" />
+                    }
+                   
+
+                    <div class="card-body">
+
+                            <h5 class="card-title"><strong>@item.Name</strong></h5>
+                            <p class="card-text" style="font-size:13px;">@item.Descripition</p>
+
+                        @if (item.ItemPrices != null && item.ItemPrices.Any())
+                        {
+                            <p class="card-text">Price: @item.ItemPrices.First().Price</p>
+                        }
+
+
+                        <a asp-action="" class="btn btn-primary">Order Now</a>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        }
+    </div>
+</body>
+</html>
+

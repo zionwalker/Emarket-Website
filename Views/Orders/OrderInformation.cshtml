@@ -1,0 +1,137 @@
+﻿@model Emarket_Website.Models.ShopEntry
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Order Summary</h2>
+
+        @foreach (var item in Model.Shop.ShopEntries)
+        {
+
+            @if (item.Item.ItemImages != null && item.Item.ItemImages.Any())
+            {
+                <img src="@Url.Content(item.Item.ItemImages.First().Url)" style="max-height:160px;" />
+            }
+            <h3>Product : @item.Item.Name </h3>
+            <p>Description:@item.Item.Descripition</p>
+
+            @if (item.Item.ItemPrices != null && item.Item.ItemPrices.Any())
+            {
+                <h6>Price: @item.Item.ItemPrices.First().Price Birr</h6>
+            }
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Sub-Total</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="quantity_@item.Id" value="1" min="1" max="10" onchange="updateSubTotal('@item.Id', @item.Item.ItemPrices.First().Price)">
+
+                    </td>
+                    <td id="subTotal_@item.Id">
+                        @item.Item.ItemPrices.First().Price Birr
+                    </td>
+                </tr>
+            </table>
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="bankTransfer">Bank Transfer</option>
+                <option value="Teleirr">Telebirr</option>
+                <option value="Cbebirr">Cbe birr</option>
+               
+            </select>
+
+          
+            <label for="paymentSlip">Upload Payment Slip:</label>
+            <input type="file" id="paymentSlip" name="paymentSlip" accept="image/*">
+            <br>
+            <a href="#" class="btn btn-primary" onclick="buyNow(@item.Id)">Buy Now</a>
+           
+
+        }
+    </div>
+
+    <script>
+        function updateSubTotal(itemId, price) {
+            var quantity = document.getElementById("quantity_" + itemId).value;
+            var subTotalElement = document.getElementById("subTotal_" + itemId);
+            var subTotal = parseFloat(price) * parseInt(quantity);
+            subTotalElement.textContent = subTotal.toFixed(2) + " Birr";
+        }
+
+
+        function buyNow(itemId) {
+            var quantity = document.getElementById("quantity_" + itemId).value;
+            window.location.href = "@Url.Action("Order", "Home")?shopEntryId=" + itemId + "&quantity=" + quantity;
+        }
+    </script>
+
+</body>
+
+</html>

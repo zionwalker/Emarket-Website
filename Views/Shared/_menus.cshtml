@@ -1,0 +1,70 @@
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor httpContextAccessor
+@if (httpContextAccessor.HttpContext.Session.GetString("roles") != null)
+{
+
+    @if (httpContextAccessor.HttpContext.Session.GetString("roles").Contains("Admin"))
+    {
+        <ul>
+
+            <li>
+                <a asp-action="Create" asp-controller="ShopCategories" class="">Add Shop Category</a>
+            </li>
+            <li>
+                <a asp-action="Requests" asp-controller="Home" class="">Requests</a>
+
+            </li>
+
+            <li>
+                <a asp-action="Logout" asp-controller="Home" class="">Logout</a>
+
+            </li>
+        </ul>
+    }
+    else if (httpContextAccessor.HttpContext.Session.GetString("roles").Contains("Seller"))
+    {
+        
+    }
+    else
+    {
+        
+        <ul>
+            
+            <li>
+                <a asp-action="Index" asp-controller="Home" style="color:black;">Home</a>
+            </li>
+            <li>
+                <a asp-action="shop" asp-controller="Home" style="color:black;">Shops</a>
+            </li>
+            <li>
+                <a asp-action="cart" asp-controller="Home" style="color:black;">Cart</a>
+            </li>
+            <li>
+                <a asp-action="UserOrder" asp-controller="Orders" class="" style="color:black;">Orders</a>
+            </li>
+            <li>
+                <button id="openCreateModal" class="btn btn-primary" style="color:black;">Seller</button>
+            </li>
+            <li>
+                <a asp-action="Logout" asp-controller="Home" class="" style="color:black;">
+					Logout
+				</a>
+            </li>
+            
+           
+        </ul>
+    }
+
+}
+
+else
+{
+    <ul>
+
+
+        <li>
+            <a asp-action="Login" asp-controller="Home" class="">Login</a>
+
+        </li>
+    </ul>
+}

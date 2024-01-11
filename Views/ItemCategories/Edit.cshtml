@@ -1,0 +1,74 @@
+﻿@model Emarket_Website.Models.ItemCategory
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="~/css/seller.css" />
+<style>
+	p {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+	label{
+		font-family:Arial;
+	}
+
+</style>
+<section id="sidebar">
+	<a href="#" class="brand">
+		<i class='bx bxs-smile'></i>
+		<span class="text">Admin Seller</span>
+	</a>
+	<ul class="side-menu top">
+		<li class="active">
+			<a asp-action="Seller" asp-controller="Home" class="">
+				<i class='bx bxs-dashboard'></i>
+				<span class="text">Dashboard</span>
+			</a>
+		</li>
+		
+		<li>
+			<a asp-action="Logout" asp-controller="Home" class="">
+				<i class='bx bxs-log-out-circle'></i>
+				<span class="text">Logout</span>
+			</a>
+		</li>
+	</ul>
+</section>
+<section id="content">
+	<main>
+		
+			<h1>Edit</h1>
+		<div class="text-right">
+			<a asp-action="Index">Back to List</a>
+		</div>
+
+			<hr />
+			
+				<div class="col-md-5">
+					<form asp-action="Edit">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						<input type="hidden" asp-for="Id" />
+						<div class="form-group">
+							<label asp-for="Name" class="control-label"></label>
+							<input asp-for="Name" class="form-control" />
+							<span asp-validation-for="Name" class="text-danger"></span>
+						</div>
+						<br />
+						<div class="form-group">
+							<input type="submit" value="Save" class="btn btn-primary" />
+						</div>
+					</form>
+				</div>
+			
+					
+					
+					</main>
+					</section>
+				
+<script src="~/js/seller.js"></script>
+

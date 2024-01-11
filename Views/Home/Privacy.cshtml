@@ -1,0 +1,103 @@
+﻿@model Emarket_Website.ViewModels.HomeViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMarket Website</title>
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Navbar Section Starts Here -->
+
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="" alt="EMarket logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a asp-action="index">Home</a>
+                    </li>
+                    <li>
+                        <a href="Shop.cshtml">Shops</a>
+                    </li>
+                    <li>
+                        <a href="Order.cshtml">Orders</a>
+                    </li>
+                    <li>
+                        <a href="">My Cart</a>
+                    </li>
+                    <li>
+                        <a href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+    <br />
+
+    <!-- Navbar Section Ends Here -->
+
+    <section class="Shop-search text-center">
+        <div class="container">
+
+            <form action="Shop-search.html" method="POST">
+                <input type="search" name="search" placeholder="Search here.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-prim">
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- ShopCategories Section Starts Here -->
+    <section class="ShopCatagories">
+        <div class="container">
+            <h2 class="text-center"><strong> <br />Shop Catagories</strong></h2>
+
+
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row">
+            @foreach (var item in Model.shopCatagorIES)
+            {
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="@Url.Content(item.Url)" />
+
+                        <div class="card-body">
+
+
+                            <h5 class="card-title"><strong>@item.Name</strong></h5>
+                            <p class="card-text" style="font-size:13px;">@item.Description</p>
+
+
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+</section>
+</body>
+</html>

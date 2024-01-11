@@ -1,0 +1,337 @@
+﻿@model Emarket_Website.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMarket Website</title>
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            background-color: lightblue;
+            border: 1px solid #cccccc;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+            min-height:300px;
+        }
+
+        .card.in-viewport {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            background-color:lightyellow;
+                transform: scale(1.1);
+                
+           
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+
+        
+    </style>
+    <script>
+        
+            document.addEventListener('DOMContentLoaded', function () {
+                
+                const items = document.querySelectorAll('.card');
+
+               
+                function isInViewport(element) {
+                    const rect = element.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+                }
+            function handleScroll() {
+                items.forEach((card) => {
+                    if (isInViewport(card)) {
+                        card.classList.add('in-viewport');
+                    }
+                    
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+        });
+
+       
+        function performSearch() {
+            var query = document.getElementById('searchInput').value.toLowerCase();
+
+           
+            const items = document.querySelectorAll('.card');
+
+         
+            items.forEach((card) => {
+                var title = card.querySelector('.card-title').textContent.toLowerCase();
+                var description = card.querySelector('.card-text').textContent.toLowerCase();
+
+                if (title.includes(query) || description.includes(query)) {
+                    card.style.display = 'block'; 
+                } else {
+                    card.style.display = 'none'; 
+                }
+            });
+        }
+
+
+
+    </script>
+</head>
+<body>
+   
+   
+    <section class="navbar">
+        <div class="container" >
+           
+            <div class="logo">
+            </div>
+            <div class="menu text-left">
+                <partial name="_menus" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <div id="createModal" class="modal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Seller Application Form</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="sellerApplicationForm" asp-action="CreateSeller" method="post" enctype="multipart/form-data" asp-controller="SellerApplications" >
+                                           
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                            
+                                            <div class="form-group">
+                                                
+                                                <label asp-route-name="Address" class="control-label"></label>
+                                                <input name="Address" class="form-control" placeholder="Address " />
+                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <label asp-route-name="NumberOfShops" class="control-label"></label>
+                                                <input type="number" name="NumberOfShops" class="form-control" min="1" max="3" placeholder="NumberOfShops" />
+                                               
+                                            </div>
+
+
+                                            
+                                            <div class="form-group">
+                                                <label name="Description" class="control-label"></label>
+                                                <input name="Description" class="form-control" placeholder="Description" />
+                                               
+                                            </div>
+                                            <div class="form-group">
+                                                <label name="file">Upload File</label>
+                                                <input type="file" name="file" class="form-control" placeholder="attach your file" />
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="submit" value="CreateSeller" class="btn btn-primary">Apply</button>
+                                            </div>
+                                        </form>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+           
+    </section>
+    <br />
+    
+    
+
+    <section class="Shop-search text-center">
+        <div class="container">
+    <input type="search" id="searchInput" name="search" placeholder="Search here.." required>
+    <button type="button" onclick="performSearch()" class="btn btn-prim">Search</button>
+
+    <div id="searchResultsContainer" class="row">
+      
+    </div>
+        </div>
+    </section>
+    <section class="ShopCategories">
+        <div class="container" >
+            <h2 class="text-center"><strong> <br />Shop Categories</strong></h2>
+
+            </div>
+           
+        <div class="row">
+            @foreach (var item in Model.shopCatagorIES) 
+    { 
+        <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="@Url.Content(item.Url)" style="max-height:140px;"  />
+
+                        <div class="card-body" >
+                           
+                               
+                            <h5 class="card-title" style="color:white;"><strong>@item.Name</strong></h5>
+                            <p class="card-text" style="font-size:13px;">@item.Description</p>
+
+
+                            <a asp-action="ShopCategory" asp-route-id="@item.Id" class="btn btn-primary">Explore</a>
+                    </div> 
+            </div> 
+        </div> 
+           
+
+        } 
+        </div>
+
+        <p class="text-center">
+
+            <a asp-action="privacy" class="btn btn-primar">See All Categories</a>
+            
+            
+        </p>
+    </section>
+    <section>     
+            <h2 class="text-center"><strong>Shops</strong></h2>
+
+    <div class="row" style="background-color:aliceblue;">
+                @foreach (var item in Model.shopS)
+                {
+                <div class="col-md-4">
+                    
+                        <div class="card" style="width: 18rem;">
+                        <img src="@Url.Content(item.Url)" style="max-height:140px;" />
+                            <div class="card-body" style="width:13rem;">
+                            <h5 class="card-title" style="color:black;" >@item.Name</h5>
+                            
+                                <p class="card-text" style="font-family:'Times New Roman', Times, serif; font-weight:100">Address : @item.Address</p>
+
+
+                            <a asp-action="ShopEntry" asp-route-id="@item.Id" class="btn btn-primary">Shop Now</a>
+                            <br>
+                            <br>
+                            <a asp-action="ReviewShop" asp-controller="ReviewShops" asp-route-id="@item.Id" style="color:green">Reviews</a>
+                            </div>
+                        </div>
+                   
+                </div>
+                }
+            </div>
+    <div class="text-center">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.PageNumber ? "active" : "")">
+                        <a class="page-link" href="?pageNumber=@i&pageSize=@ViewBag.PageSize">@i</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+    </section>
+
+
+        <div>
+        </div>
+
+        <p class="text-center"><br />
+            <a href="#" class="btn btn-primar">See All Shops</a>
+        </p>
+    <section>
+        <div class="col-md-1">
+            <div class="card" style="width:68rem; text-align:center;">
+                <div class="card-body">
+
+                    <p style="text-align:center; max-height:2px; ">
+                        "Hey there! Welcome to Emarket, your go-to online marketplace 
+                        where sellers and shoppers come together
+                        for a fantastic shopping experience! 
+                        Imagine a bustling digital marketplace
+                        where various sellers offer 
+                        a variety of products, 
+                        and you, the user, get to explore, shop, and discover amazing deals.
+                        we're all about connecting sellers with shoppers,
+                        creating a vibrant online community.
+                        Whether you're a seller looking to showcase 
+                        your products or a buyer eager to find great deals,
+                        we've got a spot for you.
+                        <br />
+                        <br />
+                        Join us at Emarket and experience the excitement of e-market shopping today!"
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li>
+                    <a href="#"><img src="facebook-new.png" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="nstagram-new.png" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="twitter.png" /></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="border-top footer text-muted" style="background-color:greenyellow;">
+
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#"> &copy; 2023 - Emarket Group</a></p>
+        </div>
+
+    </footer>
+
+  
+
+
+
+    <script>
+        document.getElementById('openCreateModal').addEventListener('click', function () {
+            var createModal = new bootstrap.Modal(document.getElementById('createModal'));
+            createModal.show();
+        });
+
+        document.getElementById('createForm').addEventListener('submit', function (e) {
+            e.preventDefault(); 
+
+            var createModal = bootstrap.Modal.getInstance(document.getElementById('createModal'));
+            createModal.hide();
+        });
+      
+    </script>
+
+</body>
+</html>

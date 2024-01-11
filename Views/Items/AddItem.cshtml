@@ -1,0 +1,139 @@
+﻿@model Emarket_Website.Models.Item
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="~/css/seller.css" />
+<style>
+	p {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+	label{
+		font-family:Arial;
+	}
+
+</style>
+<section id="sidebar">
+	<a href="#" class="brand">
+		<i class='bx bxs-smile'></i>
+		<span class="text">Admin Seller</span>
+	</a>
+	<ul class="side-menu top">
+		<li class="active">
+			<a asp-action="Seller" asp-controller="Home" class="">
+				<i class='bx bxs-dashboard'></i>
+				<span class="text">Dashboard</span>
+			</a>
+		</li>
+		<li>
+			<a asp-action="create" asp-controller="ItemCategories" class="">
+				<i class='bx bxs-log-out-circle'></i>
+				<span class="text">Add New Category</span>
+			</a>
+		</li>
+
+		<li>
+			<a asp-action="Logout" asp-controller="Home" class="">
+				<i class='bx bxs-log-out-circle'></i>
+				<span class="text">Logout</span>
+			</a>
+		</li>
+	</ul>
+</section>
+<section id="content">
+	<main>
+		<div class="head-title">
+			
+			<div class="left">
+				<h2>Add new Item</h2>
+				
+					<div class="col-md-11">
+						<form asp-action="AddItem" asp-controller="Items" method="post" enctype="multipart/form-data">
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<div class="form-group">
+								<label asp-for="ItemCat" class="control-label">Item Category</label>
+							<select asp-for="ItemCatId" class="form-control" asp-items="ViewBag.ItemCatId"></select>
+						</div>
+						
+							<br />
+							<div class="form-group">
+								<label asp-for="Name" class="control-label"></label>
+								<input asp-for="Name" class="form-control" />
+								<span asp-validation-for="Name" class="text-danger"></span>
+							</div>
+							<br />
+
+							<div class="form-group">
+								<label asp-for="Descripition" class="control-label"></label>
+								<input asp-for="Descripition" class="form-control" />
+								<span asp-validation-for="Descripition" class="text-danger"></span>
+							</div>
+							<br />
+							<div class="form-group">
+								<label asp-for="Quantity" class="control-label"></label>
+								<input asp-for="Quantity" class="form-control" />
+								<span asp-validation-for="Quantity" class="text-danger"></span>
+							</div>
+							<br />
+							<div class="form-group">
+								<label for="Price" class="control-label">Price</label>
+								<input type="number" class="form-control" name="Price" required>
+							</div>
+							<br />
+
+							<div class="form-group">
+								<label for="ItemImage">Item Image</label> <br />
+								<input type="file" name="file" class="form-control" />
+							</div>
+							<br />
+							<div class="form-group">
+								<input type="submit" value="Add Item" class="btn btn-primary" />
+							</div>
+						</form>
+					</div>
+				</div>
+
+					</div>
+					
+					</main>
+					</section>
+				
+<@* div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				@ViewBag.message
+				<h5 class="modal-title" id="exampleModalLabel">Add new Category</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<form asp-action=" AddNewCategory" method="post" enctype="multipart/form-data" asp-controller="ItemCategories">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+				<div class="modal-body">
+					<div class="form-group">
+						<label asp-for="Name" class="control-label"></label>
+						<input asp-for="Name" class="form-control" />
+						<span asp-validation-for="Name" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="" class="btn btn-primary" />
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="submit" value="AddNewCategory" class="btn btn-primary">Add New Category</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div> *@
+
+<script src="~/js/seller.js"></script>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

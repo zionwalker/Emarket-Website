@@ -1,0 +1,108 @@
+﻿@model Emarket_Website.ViewModels.HomeViewModel
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMarket Website</title>
+    <style>
+        
+       
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="" alt="EMarket logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a asp-action="index">Home</a>
+                    </li>
+                    <li>
+                        <a asp-action="shop">Shops</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+    <h2>Your Cart Item</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                 <th>
+                    @Html.DisplayName("Item Name")
+                </th>
+
+                <th>
+                    @Html.DisplayName("Shop Name")
+                </th>
+
+                <th>
+                    @Html.DisplayName("Added Date")
+                </th>
+              
+               
+            </tr>
+        </thead>
+        <tbody>
+        @foreach(var item in Model.cartItemS)
+        {
+                       
+            
+             
+                    <tr>
+                       <td>
+                        @item.Item.Name
+                      </td>
+                    <td>
+                        @item.Shop.Name
+                    </td>
+                <td>
+                        @item.AddedDate
+                </td>
+              
+                   
+                    <td>
+                        <a href="@Url.Action("OrderInformation", "Orders", new { shopEntryId = $"{item.Item.ShopEntries.FirstOrDefault()?.Id}" })" class="btn btn-primar"> View Item</a>
+                        <a asp-action="RemoveItem" asp-route-id="@item.Id" class="btn btn-primary">Remove</a>
+                      
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div id="createModal" class="modal" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Item name</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                </td>
+
+
+
+                    </tr>
+               
+        }
+        </tbody>
+    </table>
+</body>
+
+
+</html>

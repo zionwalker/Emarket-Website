@@ -1,0 +1,278 @@
+﻿@model Emarket_Website.ViewModels.HomeViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMarket Website</title>
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+            min-height: 300px;
+        }
+
+            .card.in-viewport {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .card:hover {
+                background-color: lightyellow;
+                transform: scale(1.1);
+            }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const items = document.querySelectorAll('.card');
+
+
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            function handleScroll() {
+                items.forEach((card) => {
+                    if (isInViewport(card)) {
+                        card.classList.add('in-viewport');
+                    }
+
+                });
+            }
+
+
+            window.addEventListener('scroll', handleScroll);
+
+
+            handleScroll();
+        });
+
+        function performSearch() {
+            var query = document.getElementById('searchInput').value.toLowerCase();
+
+
+            const items = document.querySelectorAll('.card');
+
+
+            items.forEach((card) => {
+                var title = card.querySelector('.card-title').textContent.toLowerCase();
+                var description = card.querySelector('.card-text').textContent.toLowerCase();
+
+                if (title.includes(query) || description.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+
+
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="" alt="EMarket logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a asp-action="Guest">Home</a>
+                    </li>
+                    <li>
+                        <a asp-action="shop">Shops</a>
+                    </li>
+                    <li>
+                        <a asp-action="cart">Cart</a>
+                    </li>
+                    <li>
+                        <a asp-action="Login" class="">Login</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </section>
+    <br />
+
+
+    <section class="Shop-search text-center">
+        <div class="container">
+            <input type="search" id="searchInput" name="search" placeholder="Search here.." required>
+            <button type="button" onclick="performSearch()" class="btn btn-prim">Search</button>
+
+            <div id="searchResultsContainer" class="row">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ShopCategories Section Starts Here -->
+    <section class="ShopCatagories">
+        <div class="container">
+            <h2 class="text-center"><strong> <br />Shop Catagories</strong></h2>
+
+        </div>
+
+        <div class="row">
+            @foreach (var item in Model.shopCatagorIES)
+            {
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="@Url.Content(item.Url)" style="max-height:140px;" />
+
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:white;"><strong>@item.Name</strong></h5>
+                            <p class="card-text" style="font-size:13px;">@item.Description</p>
+
+
+                            <a asp-action="ShopCategory" asp-route-id="@item.Id" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+        <p class="text-center">
+            <br />
+            <a asp-action="privacy" class="btn btn-primar">See All Categories</a>
+
+
+        </p>
+    </section>
+    <!-- Categories Section Ends Here -->
+    <!-- Shop MEnu Section Starts Here -->
+   
+            <h2 class="text-center"><strong>Shops</strong></h2>
+       
+        <div class="row">
+            @foreach (var item in Model.shopS)
+            {
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="@Url.Content(item.Url)" style="max-height:140px;" />
+                        <div class="card-body" style="width:13rem;">
+                            <h5 class="card-title" style="color:black;">@item.Name</h5>
+
+                            <p class="card-text" style="font-family:'Times New Roman', Times, serif; font-weight:100">Address : @item.Address</p>
+
+
+                            <a asp-action="ShopEntry" asp-route-id="@item.Id" class="btn btn-primary">Shop Now</a>
+                            <br>
+                            <br>
+                            <a asp-action="ReviewShop" asp-controller="ReviewShops" asp-route-id="@item.Id" style="color:green">Reviews</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="clearfix"></div>
+
+
+        <div>
+        </div>
+
+        <p class="text-center">
+            <br />
+            <a href="#" class="btn btn-primar">See All Shops</a>
+        </p>
+   
+    <!-- Shop Menu Section Ends Here -->
+    <!-- social Section Starts Here -->
+    <section>
+        <div class="col-md-1">
+            <div class="card" style="width:62rem;">
+                <div class="card-body">
+
+                    <p style="text-align:center;">
+                        marketing involves a bunch of processes that includes developing, pricing, promoting, distributing rural
+                        specific product and service which satisfies the consumer demand and also achieves organizational
+                        objectives as expected from the target market. This is a brief introductory tutorial that explains
+                        the strategies applied in the rapidly growing area of rural marketing. This tutorial also throws some
+                        light on the programs and measures for rural development.Professionals of marketing, especially rural
+                        marketing, aspirants of rural marketing, regardless of which sector or industry they belong to, can use
+                        this tutorial to learn how to apply rural marketing strategies in their respective organizations.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li>
+                    <a href="#"><img src="facebook-new.png" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="nstagram-new.png" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="twitter.png" /></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="border-top footer text-muted" style="background-color:greenyellow;">
+
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#"> &copy; 2023 - Emarket Group</a></p>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script>
+        document.getElementById('openCreateModal').addEventListener('click', function () {
+            var createModal = new bootstrap.Modal(document.getElementById('createModal'));
+            createModal.show();
+        });
+
+        document.getElementById('createForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // prevent the default form submission
+
+            // Additional logic for form submission (if needed)
+
+            var createModal = bootstrap.Modal.getInstance(document.getElementById('createModal'));
+            createModal.hide();
+        });
+    </script>
+
+</body>
+</html>

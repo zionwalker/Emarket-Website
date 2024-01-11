@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Emarket_Website.Models.ItemCategory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="~/css/seller.css" />
+<style>
+	p {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+	label{
+		font-family:Arial;
+	}
+
+</style>
+<section id="sidebar">
+	<a href="#" class="brand">
+		<i class='bx bxs-smile'></i>
+		<span class="text">Admin Seller</span>
+	</a>
+	<ul class="side-menu top">
+		<li class="active">
+			<a asp-action="Seller" asp-controller="Home" class="">
+				<i class='bx bxs-dashboard'></i>
+				<span class="text">Dashboard</span>
+			</a>
+		</li>
+		<li>
+			
+				<a asp-action="AddItem" asp-controller="Items" class="">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Back to Add Item</span>
+				</a>
+		</li>
+		<li>
+			<a asp-action="Logout" asp-controller="Home" class="">
+				<i class='bx bxs-log-out-circle'></i>
+				<span class="text">Logout</span>
+			</a>
+		</li>
+	</ul>
+</section>
+<section id="content">
+	<main>
+		<div class="head-title">
+			
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Name)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+					</div>
+					
+					</main>
+					</section>
+				
+<script src="~/js/seller.js"></script>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

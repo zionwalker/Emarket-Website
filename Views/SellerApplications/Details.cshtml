@@ -1,0 +1,71 @@
+﻿@model Emarket_Website.Models.SellerApplication
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Seller Application</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Number Of Shops")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumberOfShops)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Accepted Date")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AcceptedDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Requested Date")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RequestedDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Application Status")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ApplicationStatus.ApplicationStatus1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Approved By")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ApprovedByNavigation.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.User.FirstName)
+        </dd>
+    </dl>
+</div>
+<a asp-action="Requests" asp-controller="Home">Back to List</a>
+
+   

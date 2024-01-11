@@ -1,0 +1,90 @@
+﻿ @model Emarket_Website.Models.User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="~/css/sty.css" />
+    <title>Ludiflex | Login & Registration</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>EMARKET .</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="link active">Home</a></li>
+                    <li><a href="#" class="link">Shops</a></li>
+                    <li><a href="#" class="link">News</a></li>
+                    <li><a href="#" class="link">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                
+                <button class="btn white-btn" id="loginBtn" onclick=""><a asp-action="Login">Sign In</a>  </button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!----------------------------- Form box ----------------------------------->
+      
+            <!------------------- registration form -------------------------->
+            <div class="register-container" id="register">
+                 <form asp-action="Register" asp-controller="Home">
+                <div class="top">
+                    <span>Have an account? <a asp-action ="Login" onclick="">Login</a></span>
+                    <header>Sign Up</header>
+                </div>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" class="input-field" name="FirstName" id="FirstName" placeholder="First Name">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" name="LastName" id="LastName" placeholder="Last Name">
+                        <i class="bx bx-user"></i>
+                    </div>
+                  
+                </div>
+                <div class="input-box">
+                    <select id="CityId" name="CityId" class="input-field" style="color:black;" asp-items="ViewBag.CityId"></select>
+                    <i class="bx bx-city"></i>
+                </div>
+               
+                <div class="input-box">
+                   
+                    <input type="Email" class="input-field" name="Email" id="Email" placeholder="Your Email">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                   
+                    <input type="Password" class="input-field" name="Password" id="Password" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                @Html.Hidden("IsActive",true)
+                <div class="nav-button" style="text-align:center;">
+                    <input type="submit" class="btn white-btn" value="Register">
+                    <button type="reset" class="btn white-btn">Clear</button>
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Terms & conditions</a></label>
+                    </div>
+                </div>
+            </form>
+            </div>
+           
+        </div>
+</body>
+</html>

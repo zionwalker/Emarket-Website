@@ -1,0 +1,179 @@
+﻿@model IEnumerable<Emarket_Website.Models.Shop>
+@{
+	ViewData["Title"] = "Myshop";
+}
+
+
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="~/css/seller.css" />
+	<style>
+		p {
+
+			font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+	
+	</style>
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">Admin Seller</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a asp-action="Seller" asp-controller="Home" class="">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+
+			<li>
+				<a asp-action="AddItem" asp-controller="Items" class="">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Add Item</span>
+				</a>
+			</li>
+			<li>
+				<a asp-action="Logout" asp-controller="Home" class="">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section id="content">
+		<nav>
+			<i class='bx bx-menu'></i>
+
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+		</nav>
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>My Shop</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="active" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Shop</a>
+						
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+						@ViewBag.message
+							<h5 class="modal-title" id="exampleModalLabel">Create Shop</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<form asp-action="CreateShop" method="post" enctype="multipart/form-data" asp-controller="Shops">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						
+							<div class="modal-body">
+
+							<input type="hidden" asp-id="Id" value="0" />
+							<input type="hidden" asp-id="UserId" value="0" />
+							<input type="hidden" asp-id="Url" value="no image" />
+								<div class="form-group mb-3">
+								<label class="control-label">Name</label>
+								<input name="Name" class="form-control" />
+								</div>
+
+								<div class="form-group mb-3">
+								<label class="control-label">Category</label>
+								<select name="ShopCatId" id="ShopCatId" class="form-control" asp-items="ViewBag.ShopCatId"></select>
+								</div>
+								<div class="form-group mb-3">
+								<label class="control-label">City</label>
+								<select name="CityId" id="CityId" class="form-control" asp-items="ViewBag.CityId"></select>
+								</div>
+								<div class="form-group mb-3">
+								<label class="control-label">Address</label>
+								<input name="Address" class="form-control" />
+								</div>
+						 <div class="form-group">
+							<label for="imageFile">Upload Image:</label>
+							<input type="file" name="file" id="file" />
+						</div>
+
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="submit" value="CreateShop" class="btn btn-primary">Create Shop</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Shops</h3>
+						<i class='bx bx-filter'></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								
+								<th><strong>Name</strong></th>
+								<th><strong>Address</strong></th>
+								<th><strong>City</strong></th>
+								<th><strong>ShopCategory</strong></th>
+								
+							</tr>
+						</thead>
+						<tbody>
+
+							@foreach (var item in Model)
+							{
+								<tr>
+									<td>
+										<p>@Html.DisplayFor(modelItem => item.Name)</p>
+									</td>
+									<td>
+										<p> @Html.DisplayFor(modelItem => item.Address)</p>
+									</td>
+									<td>
+										<p> @item.City.Name</p>
+									</td>
+									<td>
+										<p>  @item.ShopCat.Name</p>
+									</td>
+									
+									<td>
+										<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+										<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+										<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</main>
+	</section>
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
+	<script src="~/js/seller.js"></script>
+
+
+

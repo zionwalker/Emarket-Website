@@ -1,0 +1,135 @@
+﻿@model List<Emarket_Website.Models.Order>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'> 
+	<link rel="stylesheet" href="~/css/seller.css" />
+
+	<title>AdminHub</title>
+</head>
+<body>
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">Admin Seller</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a asp-action="Myshop" asp-controller="Shops">
+					<i class='bx bxs-store'></i>
+					<span class="text">My Shops</span>
+				</a>
+			</li>		
+			<li>
+				<a asp-action="Logout" asp-controller="Home" class="">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section id="content">
+		<nav>
+			<i class='bx bx-menu'></i>
+			
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+		</nav>
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Welcome</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right'></i></li>
+					
+					</ul>
+				</div>
+
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-package'></i>
+					<span class="text">
+						<h3 class="text">@ViewBag.NumberOfOrders</h3>
+						<a asp-action="Index" asp-controller="Orders" class="">Orders</a>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-package'></i>
+					<span class="text">
+						<h3>@ViewBag.NumberOfSoldItems</h3>
+						<a asp-action="Index" asp-controller="SoldItems" class="">Sold Items</a>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-loader-circle'></i>
+					<span class="text">
+						<h3>@ViewBag.percentage %</h3>
+						<a class="">Available</a>
+					</span>
+				</li>
+				<li>
+							<i class='bx bx-package'></i>
+							<span class="text">
+						    <h3>@ViewBag.NumberInstock</h3>
+								<a class="">In Stock</a>
+							</span>
+				</li>
+			</ul>
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Recent Orders</h3>
+						<i class='bx bx-filter'></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th><i class='bx bxs-user'></i></th>
+								<th>Date Order</th>
+								<th>Total Price</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var order in Model)
+							{
+								<tr>				
+									<td>@order.User.FirstName</td>
+									<td>@order.OrderDate</td>
+									<td>@order.TotalPrice birr</td>
+									<td class="status">@order.OrderStat.Status</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</main>
+	</section>
+	<div class="clearfix">
+	</div>
+	<script src="~/js/seller.js"></script>
+</body>
+</html>

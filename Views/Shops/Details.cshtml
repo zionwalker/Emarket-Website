@@ -1,0 +1,352 @@
+﻿@model Emarket_Website.Models.Shop
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+
+<h4>Shop</h4>
+   
+    <div class="row" >
+        <div class="col-md-6">
+            <dl class="row" >
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt >
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-md-6">
+        <dl class="row">
+               
+                <dt>
+                    @Html.DisplayNameFor(model => model.City)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.City.Name)
+                </dd>
+                <dt >
+                    @Html.DisplayNameFor(model => model.ShopCat)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.ShopCat.Name)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Item
+                </th>
+                <th>
+                    Entry Quantity
+                </th>
+                <th>
+                    EntryDate
+                </th>
+            <th>
+                VariationType
+            </th>
+                <th class="text-end">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                       Add New Entry
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ShopEntries)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EntryDate)
+                    </td>
+                <td>
+                    <ul>
+
+                        @foreach (var va in item.ShopEntryVariations)
+                        {
+                            <li>
+
+                                <div class="dropdown">
+                                    <a href="#" type="button" class="dropdown-toggle text-dark" data-bs-toggle="dropdown">
+                                        
+                                           
+                                                @va.Var.VariationTypePossibleValues
+                                                
+                                            
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#DeleteEntryVariation" onclick="SetDeleteEntryVariation('@va.Id')">
+                                                Delete
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+                        }
+
+                    </ul>
+                </td>
+                   
+
+                    <td class="text-end">
+
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal_editEntry" onclick="SetEntry('@item.Id')">
+                        Edit
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#DeleteShopEntry" onclick="SetDeleteShopEntry('@item.Id')">
+                        Delete
+                    </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Shop Entry</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                <form asp-action="AddShopEntry" asp-controller="Shops">
+                <div class="modal-body">
+                        <input type="hidden" id="ShopId" name="ShopId"  value="@Model?.Id" />
+                      
+                    
+                    <div class="form-group mb-3">
+                        <label  class="control-label"> Item </label>
+                        <select name="ItemId" id="ItemId" class="form-control" asp-items="ViewBag.ItemId"></select>
+                    </div>
+                 
+                    <div class="form-group mb-3">
+                            <label  class="control-label">EntryQuantity</label>
+                            <input id="EntryQuantity" name="EntryQuantity"  class="form-control" />
+                    </div>
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" value="AddShopEntry" class="btn btn-primary">Add Entry</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal_editEntry" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit ShopEntry</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="EditEntry" asp-controller="Shops">
+                <div class="modal-body">
+                    <input type="hidden" id="ShopEntryId" name="ShopEntryId" />
+
+
+                    <div class="form-group mb-3">
+                        <select name="ItemId" id="ItemId" class="form-control" asp-items="ViewBag.ItemId"></select>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="control-label">EntryQuantity</label>
+                        <input id="EntryQuantity" name="EntryQuantity" class="form-control" />
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" value="AddShopEntry" class="btn btn-success">Edit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ShopKeeper
+            </th>
+            <th>
+                Assigned Date
+            </th>
+         
+            <th class="text-end">
+                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    Add New ShopKeepers
+                </button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ShopKeepers)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.FirstName)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignDate)
+                </td>
+             
+
+                <td class="text-end">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#editshopkeeper" onclick="SetShopKeeper('@item.Id')">
+                        Edit
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#DeleteShopKeeper" onclick="SetDeleteShopKeeper('@item.Id')">
+                        Delete
+                    </a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="AddShopKeeper" asp-controller="Shops">
+                <div class="modal-body">
+                    <input type="hidden" id="ShopId" name="ShopId" value="@Model?.Id" />
+                    <div class="form-group mb-3">
+                        <label class="control-label"> User </label>
+                        <select name="UserId" id="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" value="AddShopKeeper" class="btn btn-primary">Add Shopkeeper</button>
+                </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="DeleteShopEntry" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete Entry</h5>
+
+            </div>
+            <form asp-action="DeleteEntry" asp-controller="Shops">
+                <div class="modal-body">
+                    <input type="hidden" name="ShopEntryId" id="DeleteShopEntryId" />
+                    <label class="text-danger">Are you sure, you want to delete this Entry?</label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="submit" value="" class="btn btn-danger">Yes Delete</button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editshopkeeper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Shopkeeper</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="EditShopkeeper" asp-controller="Shops">
+                <div class="modal-body">
+                    <input type="hidden" id="ShopKeeperId" name="ShopKeeperId" />
+
+
+                    <div class="form-group mb-3">
+                        <label class="control-label"> User </label>
+                        <select name="UserId" id="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" value="EditShopkeeper" class="btn btn-primary">Edit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="DeleteShopKeeper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete </h5>
+
+            </div>
+            <form asp-action="DeleteShopkeeper" asp-controller="Shops">
+                <div class="modal-body">
+                    <input type="hidden" name="ShopKeeperId" id="DeleteShopKeeperId" />
+                    <label>Are you sure, you want to delete this ShopKeeper?</label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="submit" value="" class="btn btn-danger"> Yes Delete</button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        function SetEntry(Id) {
+            $("#ShopEntryId").val(Id);
+        }
+        function SetShopKeeper(Id) {
+            $("#ShopKeeperId").val(Id);
+        }
+        function SetDeleteShopKeeper(Id) {
+            $("#DeleteShopKeeperId").val(Id);
+        }
+        function SetDeleteShopEntry(Id) {
+            $("#DeleteShopEntryId").val(Id);
+        }
+
+    </script>
+}

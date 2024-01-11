@@ -1,0 +1,168 @@
+﻿@model Emarket_Website.ViewModels.HomeViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMarket Website</title>
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+       
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+       select {
+            width: 20px;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Navbar Section Starts Here -->
+
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="" alt="EMarket logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a asp-action="index">Home</a>
+                    </li>
+                    <li>
+                        <a href="Order.cshtml">Orders</a>
+                    </li>
+                    <li>
+                        <a href="CartItem">My Cart</a>
+                    </li>
+                    <li>
+                        <a href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+    <br />
+
+
+    <!-- Navbar Section Ends Here -->
+
+    <section class="Shop-search text-center">
+        <div class="container">
+
+            <form action="Shop-search.html" method="POST">
+                <input type="search" name="search" placeholder="Search here.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-prim">
+            </form>
+
+        </div>
+    </section>
+    <br />
+    <div class="container">
+        <h5>Find shop by city</h5>
+        <form asp-action="ShopCategory" method="get">
+        <div class="form-group">
+            <label for="cityId">Choose a city:</label>
+            <select id="cityId" name="cityId" class="form-control" style="width:23%;">
+                @foreach (var city in Model.cities)
+                {
+                    <option value="@city.Id">@city.Name</option>
+                }
+            </select>
+                
+        </div>
+
+         <button type="submit" class="btn btn-primary" style="font-size:13px;border-radius:17px; "> Filter Shops </button>
+        <input type="hidden" name="shopCategoryId" value="@Model.ShopCatId" />
+        </form>
+    </div>
+
+    <!-- ShopCategories Section Starts Here -->
+    <!-- Shop MEnu Section Starts Here -->
+    <section class="Shop-menu">
+        <div class="container">
+            @if (Model.ShopEntries != null && Model.ShopEntries.Any())
+            {
+                var firstShopEntry = Model.ShopEntries.First();
+                <h2 class="text-center"><strong>Welcome to @firstShopEntry.Shop.Name</strong></h2>
+                <!-- Other content related to the specific shop entry -->
+            }
+            <div class="clearfix"></div>
+
+
+        </div>
+        <div class="row">
+          
+            @foreach (var item in Model.shopS)
+            {
+                <div class="col-md-4">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="@Url.Content(item.Url)" style="max-height:140px;" />
+                        <div class="card-body" style="width:13rem;">
+                            <h5 class="card-title" style="color:black;">@item.Name</h5>
+
+                            <p class="card-text" style="font-family:'Times New Roman', Times, serif; font-weight:100">Address : @item.Address</p>
+
+
+                            <a asp-action="ShopEntry" asp-route-id="@item.Id" class="btn btn-primary">Shop Now</a>
+                            <br>
+                            <br>
+                            <a asp-action="ReviewShop" asp-controller="ReviewShops" asp-route-id="@item.Id" style="color:green">Reviews</a>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+
+        <div class="clearfix"></div>
+
+
+        <div>
+        </div>
+    </section>
+    <br />
+    <footer class="border-top footer text-muted" style="background-color:greenyellow;">
+
+
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#"> &copy; 2023 - Emarket Group</a></p>
+        </div>
+
+    </footer>
+</body>
+</html>

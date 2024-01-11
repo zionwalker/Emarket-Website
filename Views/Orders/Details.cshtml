@@ -1,0 +1,115 @@
+﻿@model Emarket_Website.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+
+    <h4>Order</h4>
+<div class="text-right">
+    <a asp-action="Index" class="btn btn-prim">
+        Back to List
+    </a>
+</div>
+
+    <hr />
+    <div class="row">
+    <div class="col-md-6">
+        <dl class="row">
+            
+            <dt>
+            @Html.DisplayNameFor(model => model.Shop)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Shop.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.User)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.User.FirstName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OrderDate)
+            </dd>
+
+        </dl>
+    </div>
+
+
+        <div class="col-md-6">
+            <dl >
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+              </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.OrderStat)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OrderStat.Status)
+            </dd>
+            <dt>
+                <br />
+                <button type="button" class="btn btn-sm btn-primary" onclick="location.href='@Url.Action("AcceptOrder", new { orderId = Model.Id })'">
+                    Accept Order
+                </button>
+
+            </dl>
+        </div>
+        </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Item
+            </th>
+            <th>
+                OrderId
+            </th>
+            <th>
+                Quantity
+            </th>
+             <th>
+                Unit Price
+            </th>
+            <th>
+                SubTotal price
+            </th>
+            <th class="text-end">
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Ordereditems)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubTotalPrice)
+                </td>
+
+               
+            </tr>
+        }
+    </tbody>
+</table>
+  

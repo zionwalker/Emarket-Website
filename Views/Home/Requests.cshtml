@@ -1,0 +1,83 @@
+﻿@model Emarket_Website.ViewModels.HomeViewModel
+
+@{
+    ViewData["Title"] = "Applicant Requests";
+}
+
+<h1>Requests 
+</h1>
+<h4 style="text-align:right">
+    <a asp-action="Index">Home</a>
+    <br />
+    <br/>
+</h4>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("FirstName")
+            </th>
+            <th>
+                @Html.DisplayName("Address")
+            </th>
+            <th>
+                @Html.DisplayName("NumberOfShops")
+            </th>
+           
+            <th>
+                @Html.DisplayName("RequestedDate")
+            </th>
+            <th>
+                @Html.DisplayName("AcceptedDate")
+            </th>
+
+            <td>
+                @Html.DisplayName("ApplicationStatus")
+            </td>
+            <th>
+                @Html.DisplayName("ApprovedBy")
+            </th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.sellerApplications)
+        {
+            <tr>
+                <td>
+                    @item.User.FirstName  @item.User.LastName
+                </td>
+                <td>
+                    @item.Address
+                 </td>
+                <td>
+                    @item.NumberOfShops
+                </td>
+                <td>
+                    @item.RequestedDate
+                </td>
+                <td>
+                    @item.AcceptedDate
+                </td>
+                <td>
+                    @item.ApplicationStatus.ApplicationStatus1
+                </td>
+                <td>
+                    @item.ApprovedBy
+                </td>
+                <td>
+
+                    <a asp-action="AcceptSeller" asp-route-id="@item.Id" asp-controller="SellerApplications" class="btn btn-primar">Accept</a>
+                    <a asp-action="RejectSeller" asp-route-id="@item.Id" asp-controller="SellerApplications" class="btn btn-primary">Reject</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" asp-controller="SellerApplications" class="btn btn-prima">Delete</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" asp-controller="SellerApplications" class="btn btn-prima">Details</a>
+
+    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

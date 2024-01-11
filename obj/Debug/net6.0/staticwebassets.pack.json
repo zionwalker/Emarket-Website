@@ -1,0 +1,605 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Emarket Website.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Emarket Website.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\Amen electronics.jpg",
+      "PackagePath": "staticwebassets\\Image\\Amen electronics.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\Hoodie.jpg",
+      "PackagePath": "staticwebassets\\Image\\Hoodie.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\OIP (1).jpg",
+      "PackagePath": "staticwebassets\\Image\\OIP (1).jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\OIP.jpg",
+      "PackagePath": "staticwebassets\\Image\\OIP.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\Project.jpg",
+      "PackagePath": "staticwebassets\\Image\\Project.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\R.jpg",
+      "PackagePath": "staticwebassets\\Image\\R.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\Untitled.png",
+      "PackagePath": "staticwebassets\\Image\\Untitled.png"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\ambassador.jpg",
+      "PackagePath": "staticwebassets\\Image\\ambassador.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\back.png",
+      "PackagePath": "staticwebassets\\Image\\back.png"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\ihone 13.jpg",
+      "PackagePath": "staticwebassets\\Image\\ihone 13.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\iphone 11.jpg",
+      "PackagePath": "staticwebassets\\Image\\iphone 11.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\iphone 12.jpg",
+      "PackagePath": "staticwebassets\\Image\\iphone 12.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\iphone 14.jpg",
+      "PackagePath": "staticwebassets\\Image\\iphone 14.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\iphone 15.jpg",
+      "PackagePath": "staticwebassets\\Image\\iphone 15.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\iphone 7.jpg",
+      "PackagePath": "staticwebassets\\Image\\iphone 7.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\jacket.jpg",
+      "PackagePath": "staticwebassets\\Image\\jacket.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\logo.jpg",
+      "PackagePath": "staticwebassets\\Image\\logo.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\samsung Galaxy A10.jpg",
+      "PackagePath": "staticwebassets\\Image\\samsung Galaxy A10.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\samsung Galaxy m10.jpg",
+      "PackagePath": "staticwebassets\\Image\\samsung Galaxy m10.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\samsung Galaxy s10.jpg",
+      "PackagePath": "staticwebassets\\Image\\samsung Galaxy s10.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\t-shirt.jpg",
+      "PackagePath": "staticwebassets\\Image\\t-shirt.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\th.jpg",
+      "PackagePath": "staticwebassets\\Image\\th.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\trousers.jpg",
+      "PackagePath": "staticwebassets\\Image\\trousers.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\Image\\trousers1.jpg",
+      "PackagePath": "staticwebassets\\Image\\trousers1.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\css\\seller.css",
+      "PackagePath": "staticwebassets\\css\\seller.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\css\\sty.css",
+      "PackagePath": "staticwebassets\\css\\sty.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.bootstrap4.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.bootstrap4.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.colVis.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.colVis.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.colVis.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.colVis.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.flash.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.flash.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.flash.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.flash.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.html5.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.html5.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.html5.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.print.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.print.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\buttons.print.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\dataTables.bootstrap4.js",
+      "PackagePath": "staticwebassets\\js - Copy\\dataTables.bootstrap4.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\dataTables.buttons.js",
+      "PackagePath": "staticwebassets\\js - Copy\\dataTables.buttons.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\dataTables.responsive.js",
+      "PackagePath": "staticwebassets\\js - Copy\\dataTables.responsive.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\dataTables.responsive.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\dataTables.responsive.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\responsive.bootstrap4.js",
+      "PackagePath": "staticwebassets\\js - Copy\\responsive.bootstrap4.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\responsive.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js - Copy\\responsive.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\seller.js",
+      "PackagePath": "staticwebassets\\js - Copy\\seller.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js - Copy\\site.js",
+      "PackagePath": "staticwebassets\\js - Copy\\site.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\1021\\40344ac4-028b-4e1d-ad3d-d39049f2cbaa.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1021\\40344ac4-028b-4e1d-ad3d-d39049f2cbaa.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\1022\\82936644-69b6-4ac6-9e2b-852df683afba.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1022\\82936644-69b6-4ac6-9e2b-852df683afba.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\1023\\97e915ba-75ac-4cd2-9597-ec3d52507bc9.png",
+      "PackagePath": "staticwebassets\\uploads\\1023\\97e915ba-75ac-4cd2-9597-ec3d52507bc9.png"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\11\\19fa0744-c646-46e6-91e9-a2051a303452.jpg",
+      "PackagePath": "staticwebassets\\uploads\\11\\19fa0744-c646-46e6-91e9-a2051a303452.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\12\\7d38c6fc-486d-4777-9d49-eba204333e4c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\12\\7d38c6fc-486d-4777-9d49-eba204333e4c.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\13\\6fa40a79-1783-4710-9e5d-34f41a0801b5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\13\\6fa40a79-1783-4710-9e5d-34f41a0801b5.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\15\\76b98745-1e8b-4153-bd0c-56f75a52bdaf.jpg",
+      "PackagePath": "staticwebassets\\uploads\\15\\76b98745-1e8b-4153-bd0c-56f75a52bdaf.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\16\\9f8b0110-af01-4e76-9bf5-bde59a16a5cb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\16\\9f8b0110-af01-4e76-9bf5-bde59a16a5cb.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\17\\63ebd1d1-5d85-4c8f-9385-71670af82aad.jpg",
+      "PackagePath": "staticwebassets\\uploads\\17\\63ebd1d1-5d85-4c8f-9385-71670af82aad.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\18\\4cf3dd9f-16b6-4bfd-aaff-c334086f210d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\18\\4cf3dd9f-16b6-4bfd-aaff-c334086f210d.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\19\\95408ca6-780e-49af-ab5e-fb1b798096e0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\19\\95408ca6-780e-49af-ab5e-fb1b798096e0.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\2021\\de00c35a-8d1e-484f-8a0d-eb84f404d8fb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2021\\de00c35a-8d1e-484f-8a0d-eb84f404d8fb.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\2022\\875c8b15-f6a4-456a-88e7-c0bf426bfec5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2022\\875c8b15-f6a4-456a-88e7-c0bf426bfec5.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\2023\\b93691c5-643d-404f-9b90-5f8dbb6a9fed.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2023\\b93691c5-643d-404f-9b90-5f8dbb6a9fed.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\2024\\0df63127-c296-49d5-823d-7c7e848f31df.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2024\\0df63127-c296-49d5-823d-7c7e848f31df.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\2025\\5c8a0af0-a3e1-484e-b52f-2ad935f4254c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2025\\5c8a0af0-a3e1-484e-b52f-2ad935f4254c.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\2026\\604598dd-4071-4231-9ba0-4adc90ce1708.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2026\\604598dd-4071-4231-9ba0-4adc90ce1708.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\20\\04776ea9-b2b1-47f7-8854-91edc523f0b2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\20\\04776ea9-b2b1-47f7-8854-91edc523f0b2.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\21\\0f9e272e-5c24-4d85-8a39-2648a5695028.jpg",
+      "PackagePath": "staticwebassets\\uploads\\21\\0f9e272e-5c24-4d85-8a39-2648a5695028.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\item\\0\\07652c17-1678-4c2f-a130-e4d8be5069f6.png",
+      "PackagePath": "staticwebassets\\uploads\\item\\0\\07652c17-1678-4c2f-a130-e4d8be5069f6.png"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\item\\0\\17d3b7f0-07f2-4bee-933e-a8c90532c78f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\item\\0\\17d3b7f0-07f2-4bee-933e-a8c90532c78f.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\item\\1045\\f62ea41a-60af-4304-98ff-1e9422178385.jpg",
+      "PackagePath": "staticwebassets\\uploads\\item\\1045\\f62ea41a-60af-4304-98ff-1e9422178385.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\item\\1046\\bc7a146c-1fdc-4823-9170-4258de7bd8b8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\item\\1046\\bc7a146c-1fdc-4823-9170-4258de7bd8b8.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\item\\1047\\9cf6cbb6-bd38-4b2a-ba68-0c0c4f9a846c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\item\\1047\\9cf6cbb6-bd38-4b2a-ba68-0c0c4f9a846c.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\item\\1048\\1bc5dcae-fdf7-4ff4-b726-1e180a8a8111.jpg",
+      "PackagePath": "staticwebassets\\uploads\\item\\1048\\1bc5dcae-fdf7-4ff4-b726-1e180a8a8111.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\1020\\fd182617-f25b-4bd8-bde1-8bbf02796ae1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\1020\\fd182617-f25b-4bd8-bde1-8bbf02796ae1.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\1021\\9831b6fa-6244-4a75-91c6-b169d21bba11.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\1021\\9831b6fa-6244-4a75-91c6-b169d21bba11.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\1023\\a49a73c1-b544-409a-9ade-0705b98540aa.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\1023\\a49a73c1-b544-409a-9ade-0705b98540aa.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\1024\\a0328a47-6d1c-437b-b8ac-0cea61930974.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\1024\\a0328a47-6d1c-437b-b8ac-0cea61930974.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\1025\\e8033b02-4d5c-4342-8e71-1ab9c1018e83.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\1025\\e8033b02-4d5c-4342-8e71-1ab9c1018e83.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\19\\f3ae8d18-cb1b-4218-8b22-a28b7db4ceb0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\19\\f3ae8d18-cb1b-4218-8b22-a28b7db4ceb0.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\20\\d6b2f13b-3029-4995-b0e0-fffeb2897b77.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\20\\d6b2f13b-3029-4995-b0e0-fffeb2897b77.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\21\\4e15f1f1-8ad1-42a8-8dd7-f0b194eb4968.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\21\\4e15f1f1-8ad1-42a8-8dd7-f0b194eb4968.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\22\\fe7f0e20-d3de-4c25-9a2e-0eab3cd8a6d8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\22\\fe7f0e20-d3de-4c25-9a2e-0eab3cd8a6d8.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\24\\625c230e-5a30-46ae-bc69-09e2fb46a626.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\24\\625c230e-5a30-46ae-bc69-09e2fb46a626.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\25\\613c79c2-1ebc-4075-bed7-77ae12d80f49.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\25\\613c79c2-1ebc-4075-bed7-77ae12d80f49.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\26\\71d93e21-5925-469a-a8ce-ac8998dd8e99.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\26\\71d93e21-5925-469a-a8ce-ac8998dd8e99.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\28\\2aa98c74-5886-4c59-81d1-44bc7979705f.png",
+      "PackagePath": "staticwebassets\\uploads\\shop\\28\\2aa98c74-5886-4c59-81d1-44bc7979705f.png"
+    },
+    {
+      "Id": "D:\\Projects\\Emarket Website\\Emarket Website\\wwwroot\\uploads\\shop\\30\\6e646f3b-62c6-4921-b28e-8be823a1e687.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shop\\30\\6e646f3b-62c6-4921-b28e-8be823a1e687.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Emarket Website.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Emarket Website.props",
+      "PackagePath": "build\\Emarket Website.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Emarket Website.props",
+      "PackagePath": "buildMultiTargeting\\Emarket Website.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Emarket Website.props",
+      "PackagePath": "buildTransitive\\Emarket Website.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

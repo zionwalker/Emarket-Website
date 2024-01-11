@@ -1,0 +1,177 @@
+﻿@model Emarket_Website.ViewModels.HomeViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/site.css"/>
+    
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMarket Website</title>
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            background-color:lightblue;
+            border: 1px solid #cccccc;
+            border-radius: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+            .card.in-viewport {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .card:hover {
+                background-color: lightyellow;
+                transform: scale(1.1);
+            }
+        
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const items = document.querySelectorAll('.card');
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            function handleScroll() {
+                items.forEach((card) => {
+                    if (isInViewport(card)) {
+                        card.classList.add('in-viewport');
+                    }
+
+                });
+            }
+
+          
+            window.addEventListener('scroll', handleScroll);
+
+            
+            handleScroll();
+        });
+
+
+    </script>
+</head>
+
+
+<body>
+    
+
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="" alt="EMarket logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a asp-action="index">Home</a>
+                    </li>
+                    <li>
+                        <a href="Order.cshtml">Orders</a>
+                    </li>
+                    <li>
+                        <a href="CartItem">My Cart</a>
+                    </li>
+                    <li>
+                        <a href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+    <br />
+
+    <!-- Navbar Section Ends Here -->
+
+    <section class="Shop-search text-center">
+        <div class="container">
+
+            <form action="Shop-search.html" method="POST">
+                <input type="search" name="search" placeholder="Search here.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-prim">
+            </form>
+
+        </div>
+    </section>
+    <br />
+
+
+    
+    
+        <div class="container">
+            @if (Model.ShopEntries != null && Model.ShopEntries.Any())
+            {
+                var firstShopEntry = Model.ShopEntries.First();
+                <h2 class="text-center" style="color:white;"><strong>Welcome to @firstShopEntry.Shop.Name</strong></h2>
+                <!-- Other content related to the specific shop entry -->
+            }
+                       <div class="clearfix"></div>
+
+
+        </div>
+        <div class="row"style="background-color:lightsteelblue">
+            @foreach (var shopEntry in Model.ShopEntries)
+            {
+               
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        @if (shopEntry.Item.ItemImages != null && shopEntry.Item.ItemImages.Any())
+                        {
+                            <img src="@Url.Content(shopEntry.Item.ItemImages.First().Url)" style="max-height:160px;"  />
+                        }
+                        <div class="card-body" style="width:18rem;">
+                            <h6 class="card-title" style="font-family:'Segoe UI';">@shopEntry.Item.Name</h6>
+                            <p class="card-text" style="font-size:15px; overflow:auto;">@shopEntry.Item.Descripition</p>
+                            @if (shopEntry.Item.ItemPrices != null && shopEntry.Item.ItemPrices.Any())
+                            {
+                                <h6 class="card-text" style="font-size:15px;font-family:sans-serif;">Price: @shopEntry.Item.ItemPrices.First().Price</h6>
+                            }
+                            <br>
+                            @* <a asp-action="OrderInformation" asp-route-id="@shopEntry.Id">Order Now</a> *@
+                            <a style="color:lightgreen;" href="@Url.Action("AddToCart", "Home", new {shopEntryId = shopEntry.Id })">Add to Cart</a>
+                            <a style="padding:30PX; color:yellow;" href="@Url.Action("OrderInformation", "Orders", new {shopEntryId = shopEntry.Id })"> Apply Order</a>
+                            <a href="@Url.Action("ReviewItem", "Reviews", new {ItemId = shopEntry.ItemId })" style="color: blue;">User Review</a>
+                            <i class="bx bx-cart"></i>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="clearfix"></div>
+
+
+        <div>
+        </div>
+
+<br />
+    <footer class="border-top footer text-muted" style="background-color:greenyellow;">
+
+
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#"> &copy; 2023 - Emarket Group</a></p>
+        </div>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Emarket_Website.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<h1> Your Orders </h1>
+<br />
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderStat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderStat.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shop.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.FirstName)
+            </td>
+            <td>
+                
+               <a asp-action="details" asp-route-id="@item.Id">Details</a>|
+                <a asp-action="Reject" asp-route-id="@item.Id">Reject</a> |
+                              
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

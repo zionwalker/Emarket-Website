@@ -1,0 +1,102 @@
+﻿@model List<Emarket_Website.Models.ReviewShop>
+
+@{
+    ViewData["Title"] = "ReviewShop";
+    var ShopId = ViewBag.ShopId;
+}
+
+<div class="container">
+    @if (Model != null && Model.Any())
+    {
+        var shopName = Model.First().Shop?.Name;
+
+        <h2>Reviews for @shopName</h2>
+
+        <div class="existing-reviews">
+            <h3>Previous Customer Reviews:</h3>
+            <div class="review-cards">
+                @foreach (var reviewShop in Model)
+                {
+                    <div class="card">
+                        <p><strong>User:</strong> @reviewShop.User?.FirstName</p>
+                        <p><strong>Rating:</strong> @reviewShop.RatingValue</p>
+                        <p><strong>Comment:</strong> @reviewShop.Comment</p>
+                        <p><strong>Comment:</strong> @reviewShop.RatedDate</p>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>No reviews for this shop yet.</p>
+    }
+
+    <form asp-action="SubmitReviewShop" asp-controller="ReviewShops" method="post" class="new-review-form">
+        <input type="hidden" name="ShopId" id="ShopId" value="@ViewBag.ShopId" />
+
+        <label for="RatingValue">Rating:</label>
+        <input type="number" id="RatingValue" name="RatingValue" min="1" max="5" required style="width: 100px;" />
+
+        <label for="Comment">Comment:</label>
+        <textarea id="Comment" name="Comment" required></textarea>
+
+        <button type="submit" class="submit-btn">Submit Review</button>
+    </form>
+</div>
+
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .existing-reviews {
+        margin-bottom: 20px;
+    }
+
+    .review-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: calc(33.33% - 20px);
+        box-sizing: border-box;
+    }
+
+    .new-review-form {
+        margin-top: 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .submit-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+</style>
