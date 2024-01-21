@@ -578,3 +578,21 @@ D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\refs\WindowsBase.dl
 D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 D:\Projects\Emarket Website\Emarket Website\obj\Debug\net6.0\Emarket Website.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\publish\web.config
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\appsettings.Development.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\appsettings.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Debug\net6.0\appsettings.Development.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Debug\net6.0\appsettings.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Debug\net6.0\Emarket Website.deps.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Debug\net6.0\Emarket Website.runtimeconfig.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Debug\net6.0\Emarket Website.staticwebassets.runtime.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\appsettings.Development.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\appsettings.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\Emarket Website.deps.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\Emarket Website.runtimeconfig.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\Emarket Website.staticwebassets.runtime.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\publish\appsettings.Development.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\publish\appsettings.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\publish\Emarket Website.deps.json
+D:\Projects\Emarket Website\Emarket Website\bin\Debug\net6.0\Emarket Website\bin\Release\net6.0\publish\Emarket Website.runtimeconfig.json
+D:\Projects\Emarket Website\Emarket Website\obj\Debug\net6.0\Emarket Website.sourcelink.json
