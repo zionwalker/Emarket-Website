@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emarket Website")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1be59c7ef1f2b610ca91c17f0ffdba2fbc0813a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emarket Website")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emarket Website")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
