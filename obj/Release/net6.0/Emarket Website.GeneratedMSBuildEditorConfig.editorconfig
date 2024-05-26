@@ -9,315 +9,315 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Emarket_Website
 build_property.RootNamespace = Emarket_Website
-build_property.ProjectDir = D:\Projects\Emarket Website\Emarket Website\
+build_property.ProjectDir = D:\New folder\Projects\Emarket Website\Emarket Website\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = D:\Projects\Emarket Website\Emarket Website
+build_property.MSBuildProjectDirectory = D:\New folder\Projects\Emarket Website\Emarket Website
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Cart.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Guest.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Guest.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHdWVzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Item.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Item.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Login.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Privacy.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Register.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Requests.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Requests.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXF1ZXN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/Seller.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/Seller.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWxsZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/shop.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/shop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzaG9wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/ShopCategory.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/ShopCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/ShopCategoryList.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/ShopCategoryList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/ShopEntry.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/ShopEntry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wRW50cnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/SoldItems.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/SoldItems.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb2xkSXRlbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Home/SuperAdmin.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Home/SuperAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdXBlckFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Create.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbUNhdGVnb3JpZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbUNhdGVnb3JpZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbUNhdGVnb3JpZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbUNhdGVnb3JpZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ItemCategories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbUNhdGVnb3JpZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Items/AddItem.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Items/AddItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbXNcQWRkSXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Items/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Items/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Items/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Items/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Items/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Items/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Items/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Items/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Orders/Create.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Orders/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Orders/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Orders/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Orders/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Orders/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Orders/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Orders/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Orders/OrderInformation.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Orders/OrderInformation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXE9yZGVySW5mb3JtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Orders/UserOrder.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Orders/UserOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXFVzZXJPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Orders/UserOrderDetails.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Orders/UserOrderDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXFVzZXJPcmRlckRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Create.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3U2hvcHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3U2hvcHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3U2hvcHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3U2hvcHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ReviewShops/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3U2hvcHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ReviewShops/ReviewShop.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ReviewShops/ReviewShop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3U2hvcHNcUmV2aWV3U2hvcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Reviews/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Reviews/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Reviews/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Reviews/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Reviews/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Reviews/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Reviews/ReviewItem.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Reviews/ReviewItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xSZXZpZXdJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Create.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyQXBwbGljYXRpb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyQXBwbGljYXRpb25zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyQXBwbGljYXRpb25zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyQXBwbGljYXRpb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/SellerApplications/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyQXBwbGljYXRpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shared/Error.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shared/_menus.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shared/_menus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9tZW51cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Create.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcENhdGVnb3JpZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcENhdGVnb3JpZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcENhdGVnb3JpZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcENhdGVnb3JpZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopCategories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcENhdGVnb3JpZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Create.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcEtlZXBlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcEtlZXBlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcEtlZXBlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcEtlZXBlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/ShopKeepers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcEtlZXBlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shops/CreateShop.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shops/CreateShop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHNcQ3JlYXRlU2hvcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shops/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shops/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shops/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shops/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shops/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shops/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shops/Myshop.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shops/Myshop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHNcTXlzaG9wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/SoldItems/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/SoldItems/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29sZEl0ZW1zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/SoldItems/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/SoldItems/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29sZEl0ZW1zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/SoldItems/Index.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/SoldItems/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29sZEl0ZW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Users/CreateAddress.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Users/CreateAddress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlQWRkcmVzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Users/Delete.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Users/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Users/Details.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Users/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Users/Edit.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/_ViewImports.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/_ViewStart.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Emarket Website/Emarket Website/Views/Shared/_Layout.cshtml]
+[D:/New folder/Projects/Emarket Website/Emarket Website/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zkeu3yo3sg

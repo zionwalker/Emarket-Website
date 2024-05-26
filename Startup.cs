@@ -1,38 +1,32 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using ChapaNET;
 using EMarket.Models;
 using Emarket_Website.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
-
-
-
+using System;
 
 namespace EMarket
 {
-    
     public class Startup
     {
-        public static class Settings
-        {
-            public static IConfiguration? Configuration;
-        }
         public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            Settings.Configuration = configuration;
         }
+
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            // Add services to the container.
+            services.AddControllersWithViews();
             services.AddLogging();
             services.AddHttpContextAccessor();
-            services.AddControllersWithViews();
             services.AddDistributedMemoryCache();
-          
 
             services.AddSession(options =>
             {
@@ -40,31 +34,42 @@ namespace EMarket
             });
 
             services.AddDbContext<EmarketContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultnConnection"))
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultnConnection"))
             );
+
+            // Initialize and register Chapa with dependency injection
+            services.AddScoped<Chapa>(sp =>
+            {
+                // Initialize Chapa with your test secret key
+                var secretKey = Configuration["Chapa:TestSecretkey"];
+                return new Chapa(secretKey);
+            });
+
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
             app.UseSession();
-           
-
-
 
             app.UseEndpoints(endpoints =>
             {
-                 endpoints.MapControllerRoute(
-                        name: "default",
-                       pattern: "{controller=Home}/{action=Guest}/{id?}");
-
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

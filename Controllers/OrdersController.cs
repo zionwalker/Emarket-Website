@@ -6,18 +6,111 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Emarket_Website.Models;
+using Flurl;
+using Flurl.Http;
+using ChapaNET;
 
 namespace Emarket_Website.Controllers
 {
     public class OrdersController : Controller
     {
         private readonly EmarketContext _context;
+        private readonly Chapa _chapa;
 
-        public OrdersController(EmarketContext context)
+
+        public OrdersController(EmarketContext context, Chapa chapa)
         {
             _context = context;
+            _chapa = chapa;
+
+        }
+        public async Task<IActionResult> InitiatePayment(int orderId)
+        {
+            try
+            {
+                // Get order details
+                var order = await _context.Orders
+                    .Include(o => o.User)
+                    .FirstOrDefaultAsync(o => o.Id == orderId);
+
+                if (order == null)
+                {
+                    return NotFound();
+                }
+
+                // Initiate payment with Chapa
+                var response = await _chapa.RequestAsync(new ChapaRequest(
+                    amount: order.TotalPrice,
+                    email: order.User.Email,
+                    firstName: order.User.FirstName,
+                    lastName: order.User.LastName,
+                    tx_ref: Chapa.GetUniqueRef(),
+                    callback_url: "https://localhost:7102/Orders/Callback",
+                    return_url : "https://www.google.com"
+                
+                ));
+
+                // Redirect user to Chapa checkout page
+                return Redirect(response.CheckoutUrl);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                return View("Error");
+            }
         }
 
+        // Action method to handle callback from Chapa
+        [HttpPost]
+        public async Task<IActionResult> Callback(int orderId, string tx_ref)
+        {
+            try
+            {
+                
+                var validityReport = await _chapa.VerifyAsync(tx_ref);
+
+               
+                if (validityReport.IsSuccess)
+                {
+                    
+                    var order = await _context.Orders.FindAsync(orderId);
+                    if (order != null)
+                    {
+                        
+                        await _context.SaveChangesAsync();
+
+                        
+                        return RedirectToAction("Success", "Orders", new { id = orderId });
+                    }
+                }
+                else
+                {
+                    // Transaction failed or incomplete
+                    // Handle accordingly
+                    return View("Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                return View("Error");
+            }
+
+            // If execution reaches here, something went wrong
+            return View("Error");
+        }
+
+        // Action method to display success page
+        public ActionResult Success(int id)
+        {
+            return View(id);
+        }
+
+        // Action method to display error page
+        public ActionResult Error()
+        {
+            return View();
+        }
         // GET: Orders
         public async Task<IActionResult> Index()
         {
@@ -88,6 +181,8 @@ namespace Emarket_Website.Controllers
         public ActionResult OrderInformation(int shopEntryId)
         {
            
+
+
             var shopEntries = _context.ShopEntries
                 .Include(x => x.Shop)
                 .Include(se => se.Item)

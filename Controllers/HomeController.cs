@@ -322,7 +322,6 @@ namespace Emarket_Website.Controllers
 
                 var newCartItem = new CartItem
                 {
-
                     ItemId = shopEntry.ItemId,
                     ShopId = shopEntry.ShopId,
                     Quantitiy = 1,

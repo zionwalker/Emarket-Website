@@ -2,6 +2,7 @@
 @inject IHttpContextAccessor httpContextAccessor
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
         background:
@@ -11,9 +12,10 @@
     <title>@ViewData["Title"] - Emarket_Website</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Emarket_Website.styles.css" asp-append-version="true" />	
+    <link rel="stylesheet" href="~/Emarket_Website.styles.css" asp-append-version="true" />
 
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -23,16 +25,18 @@
                     {
                         if (httpContextAccessor.HttpContext.Session.GetString("roles").Contains("Admin"))
                         {
-                            
+
                         }
                         else if (httpContextAccessor.HttpContext.Session.GetString("roles").Contains("Seller"))
                         {
                             <ul class="navbar-nav flex-grow-1">
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="ReviewShops" asp-action="Create"></a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="ReviewShops"
+                                        asp-action="Create"></a>
+
                                 </li>
                                 <li class="nav-item">
-                                     
+
                                 </li>
 
                             </ul>
@@ -40,7 +44,26 @@
                         else
                         {
                             <ul class="navbar-nav flex-grow-1">
-                                
+                                <li>
+                                    <a asp-action="Index" asp-controller="Home" style="color:black;">Home</a>
+                                </li>
+                                <li>
+                                    <a asp-action="shop" asp-controller="Home" style="color:black;">Shops</a>
+                                </li>
+                                <li>
+                                    <a asp-action="cart" asp-controller="Home" style="color:black;">Cart</a>
+                                </li>
+                                <li>
+                                    <a asp-action="UserOrder" asp-controller="Orders" class="" style="color:black;">Orders</a>
+                                </li>
+                                <li>
+                                    <button id="openCreateModal" class="btn btn-primary" style="color:black;">Seller</button>
+                                </li>
+                                <li>
+                                    <a asp-action="Logout" asp-controller="Home" class="" style="color:black;">
+                                        Logout
+                                    </a>
+                                </li>
                             </ul>
 
                         }
@@ -51,14 +74,14 @@
             </div>
         </nav>
     </header>
-    
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-   
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -66,4 +89,5 @@
 
 
 </body>
+
 </html>

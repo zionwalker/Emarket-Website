@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Emarket Website\\Emarket Website\\Emarket Website.csproj": {}
+    "D:\\New folder\\Projects\\Emarket Website\\Emarket Website\\Emarket Website.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Emarket Website\\Emarket Website\\Emarket Website.csproj": {
+    "D:\\New folder\\Projects\\Emarket Website\\Emarket Website\\Emarket Website.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Emarket Website\\Emarket Website\\Emarket Website.csproj",
+        "projectUniqueName": "D:\\New folder\\Projects\\Emarket Website\\Emarket Website\\Emarket Website.csproj",
         "projectName": "Emarket Website",
-        "projectPath": "D:\\Projects\\Emarket Website\\Emarket Website\\Emarket Website.csproj",
+        "projectPath": "D:\\New folder\\Projects\\Emarket Website\\Emarket Website\\Emarket Website.csproj",
         "packagesPath": "C:\\Users\\Phoenix\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Emarket Website\\Emarket Website\\obj\\",
+        "outputPath": "D:\\New folder\\Projects\\Emarket Website\\Emarket Website\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Chapa.NET": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[6.0.25, )"
@@ -66,6 +70,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.5, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
